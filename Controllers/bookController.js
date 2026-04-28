@@ -171,8 +171,8 @@ exports.purchaseBookStripe=async(req,res)=>{
                 title,author,noOfPages,image,price,discountPrice,abstract,publisher,language,isbn,uploadImg,category,userMail,status:'sold',bought:email
             }
     const session=await stripe.checkout.sessions.create({
-        success_url:"http://localhost:5173/payment-success",
-        cancel_url:"http://localhost:5173/payment-error",
+        success_url:"bookstore-fe-orpin.vercel.app/payment-success",
+        cancel_url:"bookstore-fe-orpin.vercel.app/payment-error",
         payment_method_types:['card'],
         line_items,
         mode:'payment'
