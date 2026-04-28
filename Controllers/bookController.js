@@ -1,6 +1,6 @@
 const books=require('../Models/bookModel')
 
-const stripe=require('stripe') ("process.env.STRIPE_SECRET")
+const stripe=require('stripe') (process.env.STRIPE_SECRET)
 
 exports.addBook=async(req,res)=>{
     // console.log("Add Book API")
